@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
-import Navbar from "../components/nav/navbar";
-import Header from "../components/header/header";
-import Search from "../components/search/serach";
-import Result from "../components/results/results";
+import Navbar from "./components/nav/navbar";
+import Header from "./components/header/header";
+import Search from "./components/search/serach";
+import Result from "./components/results/results";
 
 
 
