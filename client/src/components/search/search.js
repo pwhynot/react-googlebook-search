@@ -37,7 +37,7 @@ class Search extends Component {
                 Search for an Author or Book
                 </div>
                 <input onChange={this.handleInputChange} type="search"></input>
-                <button onClick={this.handleFormSubmit} onClick={this.loadBooks}  className="btn btn-success">Search!</button>
+                <button onClick={this.handleFormSubmit && this.loadBooks} className="btn btn-success">Search!</button>
             </div>
             </div>
         );

@@ -12,10 +12,6 @@ class Results extends Component {
         this.loadBooks();
     };
 
-    object(books){
-        const book = Object.keys(books)
-    }
-
     loadBooks = () =>{
     API.getBooks()
     .then(res => this.setState({books: res.data}))

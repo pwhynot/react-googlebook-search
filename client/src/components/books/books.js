@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import "./style.css";
-import API from "../../utils/API";
+
 
 function Books(props){
     return (
@@ -10,7 +10,7 @@ function Books(props){
         <li className="col-6 pb-2"><strong>{props.authors}</strong></li>
         </div>
         <div className="row">
-        <img className="p-3 col-2" src={props.image}/>
+        <img className="p-3 col-2" src={props.image} alt="book"/>
         <div className="col-3"></div>
         <p className="col-6">{props.desc}</p>
         </div>

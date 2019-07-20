@@ -1,7 +1,6 @@
 import axios from "axios";
 
 let i = 0;
-const rows = 20;
 const saveBooks = []
 
 
