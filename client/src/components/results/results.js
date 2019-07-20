@@ -1,4 +1,4 @@
-import Books from "../Books/Books"
+import Books from "../books/books"
 import React, { Component } from "react";
 import API from "../../utils/API";
 import "./style.css";
@@ -41,4 +41,4 @@ class Results extends Component {
  )};
 }
 
-export default results;
+export default Results;

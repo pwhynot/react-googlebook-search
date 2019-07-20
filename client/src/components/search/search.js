@@ -44,4 +44,4 @@ class Search extends Component {
         }
     };
 
-export default search;
+export default Search;

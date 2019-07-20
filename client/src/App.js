@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Book from "./components/books/books";
+import Books from "./components/books/books";
 import "./App.css";
 import Navbar from "./components/nav/navbar";
 import Header from "./components/header/header";
-import Search from "./components/search/serach";
+import Search from "./components/search/search";
 import Results from "./components/results/results";
 
 
@@ -21,7 +21,7 @@ class App extends Component {
          <Search  />
          <div className="resultBox">
          <Results>
-         <Book />
+         <Books />
          </ Results>
          </div>
         </div>
