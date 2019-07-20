@@ -3,9 +3,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import "./style.css";
 
-
-
-class Result extends Component {
+class Results extends Component {
     state = {
         books: []
     };
@@ -38,7 +36,8 @@ class Result extends Component {
             </Books>))}
 
                       </ul>
-</div></div>
+    </div>
+</div>
  )};
 }
 

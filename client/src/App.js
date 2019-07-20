@@ -4,7 +4,8 @@ import "./App.css";
 import Navbar from "./components/nav/navbar";
 import Header from "./components/header/header";
 import Search from "./components/search/serach";
-import Result from "./components/results/results";
+import Results from "./components/results/results";
+
 
 
 class App extends Component {
@@ -19,9 +20,9 @@ class App extends Component {
          <Header />
          <Search  />
          <div className="resultBox">
-         <Result>
+         <Results>
          <Book />
-         </ Result>
+         </ Results>
          </div>
         </div>
       );

@@ -15,11 +15,11 @@ class Search extends Component {
             .catch(err => console.log(err));
         };
     
-        loadBooks = () =>{
-            API.getBooks()
+    loadBooks = () =>{
+        API.getBooks()
             .then(res => this.setState({books: res.data}))
             .catch(err => console.log(err))
-            };
+         };
         
 
     handleInputChange = event => {
