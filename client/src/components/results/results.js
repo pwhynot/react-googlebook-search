@@ -15,6 +15,7 @@ class Results extends Component {
         this.loadBooks();
     }
 
+   
     loadBooks = () => {
         API.getBooks()
         .then(res =>
@@ -36,19 +37,7 @@ class Results extends Component {
         });
     };
 
-    handleFormSubmit = event => {
-        event.preventDefault();
-        if (this.state.title && this.state.author) {
-            API.saveBook({
-                title: this.state.title,
-                author:this.state.author,
-                description: this.state.description
-            })
-                .then(res => this.loadBooks())
-                .catch(err => console.log(err));
-        }
-    };
-
+    
     render () {
         console.log(this.state.books)
     return (
