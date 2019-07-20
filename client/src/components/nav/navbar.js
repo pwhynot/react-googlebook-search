@@ -1,8 +1,15 @@
 import React from "react";
 
+const style = {
+  NavbarStyle: {
+      marginTop: 0,
+      textAlign: "center"
+  }
+}
+
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-success">
+    <nav style={style.NavbarStyle} className="navbarDiv">
       <div className="navbar-brand">
           <ul>
             <li><a href="/">Google Books</a></li>
