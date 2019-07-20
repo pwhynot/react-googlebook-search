@@ -10,13 +10,9 @@ const style = {
 function Navbar() {
   return (
     <nav style={style.NavbarStyle} className="navbarDiv">
-      <div className="navbar-brand">
-          <ul>
-            <li><a href="/">Google Books</a></li>
-            <li><a href="/search">Search</a></li>
-            <li><a href="/saved">Saved</a></li>
-          </ul>
-      </div>
+      <a className="navbar-brand" href="/">
+        Google Books
+      </a>  
     </nav>
   );
 }

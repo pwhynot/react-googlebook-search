@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 mongoose.connect(
-    process.env.MONGOD_URI || "mongodb://localhost/googlebooks"
+    process.env.MONGOD_URI || "mongodb://localhost/googleBooks"
 );
 
 const bookSeed = [
@@ -14,3 +14,15 @@ const bookSeed = [
       title: "End the Fed"
     }
   ]
+
+  db.googleBooks
+  .remove({})
+  .then(() => db.googleBooks.collection.insertMany(bookSeed))
+  .then(data => {
+    console.log(data.result.n + " books inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });

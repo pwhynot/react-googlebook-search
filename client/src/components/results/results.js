@@ -5,17 +5,48 @@ import "./style.css";
 
 class Results extends Component {
     state = {
-        books: []
+        books: [],
+        title: "",
+        author: "",
+        description: ""
     };
 
-    componentDidMount(){
+    componentDidMount() {
         this.loadBooks();
+    }
+
+    loadBooks = () => {
+        API.getBooks()
+        .then(res =>
+            this.setState({ books: res.data, title: "", description: ""})
+            )
+            .catch(err => console.log(err));
     };
 
-    loadBooks = () =>{
-    API.getBooks()
-    .then(res => this.setState({books: res.data}))
-    .catch(err => console.log(err))
+    deleteBook = id => {
+        API.deleteBook(id)
+        .then(res => this.loadBooks())
+        .catch(err => console.log(err));
+    };
+
+    handleInputChange = event => {
+        const { name, value } = event.target;
+        this.setState({
+            [name]: value
+        });
+    };
+
+    handleFormSubmit = event => {
+        event.preventDefault();
+        if (this.state.title && this.state.author) {
+            API.saveBook({
+                title: this.state.title,
+                author:this.state.author,
+                description: this.state.description
+            })
+                .then(res => this.loadBooks())
+                .catch(err => console.log(err));
+        }
     };
 
     render () {
@@ -30,8 +61,7 @@ class Results extends Component {
             {this.state.books.map(book => (
             <Books key={book._id} title={book.title} authors={book.authors} image={book.imageLinks[0].thumbnail} desc={book.description}>
             </Books>))}
-
-                      </ul>
+             </ul>
     </div>
 </div>
  )};
