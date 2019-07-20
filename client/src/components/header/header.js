@@ -1,10 +1,20 @@
 import React from "react";
 import "./style.css";
 
+const style = {
+    HeaderStyle: {
+        marginTop: 0,
+        height: "12vh",
+        textAlign: "center",
+        width: "100%",
+        background: "black",
+        color: "white"
+    }
+}
 
 function Header () {
     return (
-        <div className="jumbotron display-5 container">
+        <div style={style.HeaderStyle} className="headerDiv">
             <h1>Search and Save books with Google Book Search!</h1>
         </div>
     );
