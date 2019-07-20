@@ -34,10 +34,10 @@ class Search extends Component {
             <div className="container">
             <div className="search-panel">
                 <div className="panel-body">
-                Type a book title or author to search!
+                Search for an Author or Book
                 </div>
                 <input onChange={this.handleInputChange} type="search"></input>
-                <button onClick={this.handleFormSubmit} onClick={this.loadBooks}  className="btn btn-primary">Search!</button>
+                <button onClick={this.handleFormSubmit} onClick={this.loadBooks}  className="btn btn-success">Search!</button>
             </div>
             </div>
         );
