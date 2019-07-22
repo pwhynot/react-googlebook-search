@@ -13,16 +13,19 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 };
 
-
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+ });
+const routes = require("./routes/api/index")
 
 app.use(routes);
 
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost:27017/googlebooks", {useNewUrlParser: true}
+  process.env.MONGODB_URI || "mongodb://localhost/googleBooks", {useNewUrlParser: true}
 );
 
 
 app.listen(PORT, () => {
-  console.log(`Now listening on: http://localhost:${PORT}`);
+  console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
