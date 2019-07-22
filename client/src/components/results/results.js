@@ -48,7 +48,7 @@ class Results extends Component {
         </div>
             <ul>
             {this.state.books.map(book => (
-            <Books key={book._id} title={book.title} authors={book.authors} image={book.imageLinks[0].thumbnail} desc={book.description}>
+            <Books key={book._id} title={book.title} authors={book.authors} image={book.imageLinks[0].thumbnail} description={book.description}>
             </Books>))}
              </ul>
     </div>

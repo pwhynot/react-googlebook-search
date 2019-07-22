@@ -7,8 +7,11 @@ const googleBooks = new Schema({
   description: { type: String, required: true },
   image: { type: String, required: true },
   link: { type: String, required: true }
-});
+},
 
-const Book = mongoose.model("book", googleBooks);
+{typeKey: '$type'}
+);
+
+const Book = mongoose.model("books", googleBooks);
 
 module.exports = Book;
