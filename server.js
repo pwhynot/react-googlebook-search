@@ -19,10 +19,10 @@ app.use(routes);
 
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://heroku_59hf322r:P87r1605!.mlab.com:53007/heroku_59hf322r"
+  process.env.MONGODB_URI || "mongodb://localhost:27017/booksDB", {useNewUrlParser: true}
 );
 
 
 app.listen(PORT, () => {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
+  console.log(`Now listening on: http://localhost:${PORT}`);
 });
