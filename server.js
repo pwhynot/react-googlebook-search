@@ -19,7 +19,7 @@ app.use(routes);
 
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost:27017/booksDB", {useNewUrlParser: true}
+  process.env.MONGODB_URI || "mongodb://localhost:27017/googlebooks", {useNewUrlParser: true}
 );
 
 
